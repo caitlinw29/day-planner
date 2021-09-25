@@ -2,6 +2,8 @@
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 
+
+
 //color-code blocks with past, present, and future classes
 //pull hour in 24H format to hour variable
 var hour = parseInt(today.format("H"));
@@ -22,13 +24,14 @@ $("[data-hour]").filter(function() {
 }).addClass("future");
 
 
+
 //Save button saves entry to local storage
 //Pull the key from the html
 function save(key) {
     //text will be the text that the user inputs
     var text = getText(key);
     //save to local storage
-    localStorage.setItem(9, text);
+    localStorage.setItem(key, text);
 }
 
 //Get the value of the text area with the provided key
@@ -39,6 +42,7 @@ function getText(key) {
     }).val();
 }
 
+
 //Set the text to pull from localStorage on page reload - text will stay on the page
 //For each text area...
 $("[data-key]").each(function() {
@@ -48,4 +52,5 @@ $("[data-key]").each(function() {
     var savedText = localStorage.getItem(key);
     //set the value to be the savedText for the current key
     $(this).val(savedText);
-});
+})
+
