@@ -23,12 +23,34 @@ $("[data-hour]").filter(function() {
 
 
 //Save button saves entry to local storage
+//Pull the key from the html
+function save(key) {
+    //text will be the text that the user inputs
+    var text = getText(key);
+    //save to local storage
+    localStorage.setItem(9, text);
+}
+
+//Get the value of the text area with the provided key
+function getText(key) {
+    //Find the value (the text) of the text area with the matching key
+    return $("[data-key]").filter(function() {
+        return $(this).data("key") == key;
+    }).val();
+}
+
+//Set the text to pull from localStorage on page reload - text will stay on the page
+//For each text area...
+$("[data-key]").each(function() {
+    //set key to be the key for the current iteration in 'each'
+    var key = $(this).data("key");
+    //pull key text from localStorage
+    var savedText = localStorage.getItem(key);
+    //set the value to be the savedText for the current key
+    $(this).val(savedText);
+});
 
 
-//Text stays on refresh
-
-
-//Readjust file - vars on top, call functions, then function descriptions
 //Add screenshot to images folder and doublecheck README image and link
 //Check no errors in console, push final changes, deploy website
 //submit two links for review
