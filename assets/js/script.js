@@ -49,8 +49,3 @@ $("[data-key]").each(function() {
     //set the value to be the savedText for the current key
     $(this).val(savedText);
 });
-
-
-//Add screenshot to images folder and doublecheck README image and link
-//Check no errors in console, push final changes, deploy website
-//submit two links for review
