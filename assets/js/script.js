@@ -3,8 +3,19 @@ var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 
 //color-code blocks with past, present, and future classes
+var hour = parseInt(today.format("H"));
 
+$("[data-hour]").filter(function() {
+    return $(this).data("hour") < hour;
+}).addClass("past");
 
+$("[data-hour]").filter(function() {
+    return $(this).data("hour") == hour;
+}).addClass("present");
+
+$("[data-hour]").filter(function() {
+    return $(this).data("hour") > hour;
+}).addClass("future");
 
 
 //Save button saves entry to local storage
