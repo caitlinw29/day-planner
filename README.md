@@ -1,10 +1,35 @@
-# day-planner
+# Day Planner
+## Description
+* Day Planner is a simple calendar application that allows a user to save events for each hour of the workday. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery. Times run from 9AM-5PM in one-hour blocks.
 
-* day-panner is an interactive site that will allow the user to input their tasks and plans for the day. Times run from 9AM-5PM in one-hour blocks.
-
-* To use the planner, click into the hour and make your plans, then save with the button on the right of the hour block.
+* To use the planner, click into the hour and make your plans, then save that block.
 
 * Gray times are in the past, red is the current hour, and green is in the future.
 
-* See page at https://caitlinw29.github.io/day-planner/
+* See page at: [Day Planner](https://caitlinw29.github.io/day-planner/)
+## User Story
+
+```md
+AS AN employee with a busy schedule
+I WANT to add important events to a daily planner
+SO THAT I can manage my time effectively
+```
+
+## Acceptance Criteria
+
+```md
+GIVEN I am using a daily planner to create a schedule
+WHEN I open the planner
+THEN the current day is displayed at the top of the calendar
+WHEN I scroll down
+THEN I am presented with timeblocks for standard business hours
+WHEN I view the timeblocks for that day
+THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+WHEN I click into a timeblock
+THEN I can enter an event
+WHEN I click the save button for that timeblock
+THEN the text for that event is saved in local storage
+WHEN I refresh the page
+THEN the saved events persist
+```
 ![Day Planner](./assets/images/day-plannerSS.png)
