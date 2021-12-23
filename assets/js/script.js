@@ -50,3 +50,25 @@ $("[data-key]").each(function() {
     $(this).val(savedText);
 })
 
+//Save all entries with one button
+var saveAllBtn = $("#saveAll");
+saveAllBtn.on('click', function(){
+    for(let i=9; i<18; i++){
+        save(i);
+    }
+})
+
+
+//Clear all entries with one button
+var clearAllBtn = $("#clearAll");
+clearAllBtn.on('click', function(){
+    //for each time block
+    for(let i=9; i<18; i++) {
+        //set key to equal time of current iteration
+        key = i;
+        //remove that key
+        window.localStorage.removeItem(key);   
+    }
+    //reload the page
+    window.location.reload();
+})

@@ -100,6 +100,7 @@ textarea:focus {
     height: 50px;
     border-radius: 15px;
     margin-left: 20px;
+    font-size: 120%;
 }
 
 #saveAll {
@@ -114,6 +115,7 @@ textarea:focus {
 
 #clearAll {
     background-color: #ff6961;
+    
 }
 
 #clearAll:hover {
