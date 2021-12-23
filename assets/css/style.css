@@ -26,15 +26,6 @@ textarea:focus {
     border-bottom: 10px solid black;
 }
 
-/* .description {
-    white-space: pre-wrap;
-} */
-
-/* .time-block {
-    text-align: center;
-    border-radius: 15px;
-} */
-
 .row {
     white-space: pre-wrap;
     border-top: 1px solid white;
@@ -77,6 +68,11 @@ textarea:focus {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
     color: black;
+}
+
+.saveBtn i:active {
+    color: white;
+    transition: all .1s;
 }
 
 .container {
