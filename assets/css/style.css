@@ -81,6 +81,7 @@ textarea:focus {
     grid-template-rows: repeat(9, 80px);
     grid-column-gap: 10px;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .fa-save {
@@ -88,4 +89,40 @@ textarea:focus {
     justify-content: center;
     line-height: 80px;
     font-size: 200%;
+}
+
+#save-and-clear {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.allBtn {
+    height: 50px;
+    border-radius: 15px;
+    margin-left: 20px;
+}
+
+#saveAll {
+    background-color: #77dd77;
+}
+
+#saveAll:hover {
+    color: white;
+    font-weight: 500;
+    border: 5px solid #54a154;
+}
+
+#clearAll {
+    background-color: #ff6961;
+}
+
+#clearAll:hover {
+    color: white;
+    font-weight: 500;
+    border: 5px solid #a35551;
+}
+
+#saveAll:active,
+#clearAll:active {
+    color: black;
 }
